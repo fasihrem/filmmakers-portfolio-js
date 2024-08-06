@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects I've worked on!</title>
+    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/projectsPageStyle.css" type="text/css">
+    <script src="script/projects.js"></script>
+</head>
+<body>
+
+    <div class="headerBoad">
+        <span>FASIHREM</span>
+    </div>
+
+    <button id="icon-btn" class="icon-btn" onclick="toggleNavContainer()">
+        <img id="icon-img" src="img/iconCool1.png">
+    </button>
+
+    <div class="nav-container" id = "nav-container">
+        <a href="home.html" class="nav-button">
+            <span>HOME</span>
+        </a>
+        <a href="projectsPage.html" class="nav-button active currentPage">
+            <span>MY WORK</span>
+        </a>
+        <a href="itsMe.html" class="nav-button">
+            <span>WHO AM I?</span>
+        </a>
+    </div>
+
+
+    <div id="video">
+        <button id="prev-btn" class="mv-btn" onclick="changeVideo(-1)">
+            <img src="img/prev.png">
+        </button>
+        <button id="next-btn" class="mv-btn" onclick="changeVideo(1)">
+            <img src="img/next.png">
+        </button>
+        <video id="my-video" class="video-js video-fade" controls preload="auto" width="640" height="360">
+            <source src="vid/ccc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <script src="https://unpkg.com/video.js/dist/video.js"></script>
+
+    </div>
+
+    <footer>
+        <div id="buttons-container">
+            <div class="social-button" onclick="window.open('https://www.linkedin.com/in/fasihrem/', '_blank')">
+                <img src="img/linkedin.png" alt="LinkedIn">
+            </div>
+            <div class="social-button" onclick="window.open('https://www.instagram.com/fasihrem/', '_blank')">
+                <img src="img/instagram.png" alt="Instagram">
+            </div>
+            <div class="social-button" onclick="window.open('https://www.fiverr.com/fasihmakesvideo', '_blank')">
+                <img src="img/fiverr.png" alt="Fiverr">
+            </div>
+            <div class="social-button" onclick="window.open('mailto:fasihrem@email.com', '_blank')">
+                <img src="img/mail.png" alt="Email">
+            </div>
+            <div class="social-button" onclick="window.open('https://read.cv/fasihrem','_blank')">
+                <img src="img/resume.png" alt="resume" class="socialImg">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

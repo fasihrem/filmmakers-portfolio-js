@@ -1,0 +1,277 @@
+::selection {
+    background-color: black;
+    color: white; /* Optionally set the text color for better visibility on dark background */
+}
+
+/*for firefox*/
+::-moz-selection{
+    background-color: black;
+    color: white;
+}
+
+#video{
+    position: relative;
+    top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-left: 300px;
+    transition: margin-left 0.3s ease;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #708090;
+    font-family: Ed;
+}
+
+.headerBoad {
+    background-color: #ff8c00; /* Choose your preferred background color */
+    color: antiquewhite; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 10px; /* Add padding for better visual appearance */
+    margin-top: 20px; /* Add spacing from the top */
+    /*margin-left: 200px; !* Add right margin to prevent overlap with buttons *!*/
+    margin-right: 20px;
+    height: 60px;
+    border-radius: 20px;
+    vertical-align: middle;
+    line-height: 60px;
+    transition: font-size 0.3s ease; /* Smooth transition for width */
+    position: relative;
+    margin-left: 20px;
+    transition: margin-left 0.3s ease;
+}
+.headerBoad span {
+    display: block; /* Make the span a block-level element */
+    font-size: 3em; /* Adjust the font size as needed */
+    font-weight: bold; /* Apply bold font weight */
+    transition: font-size 0.3s ease; /* Smooth transition for width */
+
+}
+
+/*.nav-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    position: fixed;*/
+/*    left: 20px; !* Add left spacing *!*/
+/*    top: 20px; !* Add top spacing *!*/
+/*}*/
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -140px; /* Initial position off-screen */
+    top: 20px; /* Add top spacing */
+    opacity: 0; /* Initially hidden */
+    transition: left 0.3s ease, opacity 0.3s ease; /* Smooth transition for animation */
+    pointer-events: none; /* Disable pointer events for hidden buttons */
+}
+
+.nav-container.show {
+    left: 20px; /* Display buttons when the container has the "show" class */
+    opacity: 1; /* Make buttons visible */
+    pointer-events: auto; /* Enable pointer events when visible */
+}
+
+.nav-container.show {
+    left: 20px; /* Display buttons when the icon or container is hovered */
+    opacity: 1; /* Make buttons visible */
+    pointer-events: auto; /* Enable pointer events when visible */
+    display: flex;
+}
+.nav-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text horizontally */
+    padding: 10px;
+    cursor: pointer;
+    color: #000; /* Black text color for contrast */
+    margin-bottom: 10px; /* Add spacing between buttons */
+    text-decoration: none; /* Remove default underline on anchor tags */
+    background-color: white; /* White background for non-active buttons */
+    border-radius: 10px;
+    height: 140px;
+    width: 140px;
+    transition: width 0.3s ease; /* Smooth transition for width */
+    font-size: 2em;
+}
+
+.nav-button:hover{
+    width: 160px;
+}
+
+.nav-button.active {
+    border-radius: 10px;
+    height: 420px;
+    width: 140px;
+    transition: width 0.3s ease; /* Smooth transition for width */
+}
+
+.nav-button.active:hover {
+    height: 420px;
+    width: 160px;
+}
+
+.nav-button:nth-child(1){
+    /*background-color: #097969;*/
+    background-color: #ff8c00;
+}
+
+.nav-button:nth-child(1):hover{
+    box-shadow: 0px 0px 10px #ff8c00;
+}
+
+.nav-button:nth-child(2){
+    border-color: #ff8c00;
+    background-color: #708090;
+    border-width: 10px;
+    box-shadow: 0px 0px 10px #ff8c00;
+}
+
+.nav-button:nth-child(2):hover{
+
+}
+
+.nav-button:nth-child(3) {
+    /*background-color: #1ecbe1; !* Button 3 color *!*/
+    background-color: #ff8c00;
+}
+
+.nav-button:nth-child(3):hover{
+    box-shadow: 0px 0px 10px #ff8c00;
+}
+
+.nav-button span {
+    margin-top: auto; /* Align text to the bottom */
+    text-align: left;
+    color: #000; /* White text color for better contrast on colored buttons */
+}
+
+.currentPage{
+    text-decoration: line-through;
+}
+
+.nav-button:hover{
+    text-decoration: line-through;
+}
+
+#icon-btn {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    color: black;
+}
+
+.mv-btn img{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+
+.icon-btn img{
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+}
+#prev-btn {
+    position: relative;
+    top: 230px;
+    /*left: 10px;*/
+    background-color: transparent;
+    border: none;
+    z-index: 1000;
+    cursor: grabbing;
+}
+
+#next-btn {
+    position: relative;
+    top: 230px;
+    right: -690px;
+    background-color: transparent;
+    border: none;
+    cursor: grabbing;
+    z-index: 1000;
+}
+.video-fade {
+    opacity: 1;
+    transition: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.video-js {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.video-js .vjs-control-bar {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#icon-img.hidden {
+    opacity: 0; /* Hide the icon when it has the 'hidden' class */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Disable pointer events for hidden icon */
+}
+
+#icon-img.visible {
+    opacity: 1; /* Show the icon when it does not have the 'hidden' class */
+    transition: opacity 0.3s ease;
+    pointer-events: auto; /* Enable pointer events when visible */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#buttons-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse; /* Arrange buttons from right to left */
+    margin: 10px; /* Adjust margin as needed */
+    align-items: center;
+    text-align: center;
+}
+
+.social-button {
+    margin-left: 10px; /* Adjust spacing between buttons as needed */
+    cursor: pointer;
+}
+
+.social-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}

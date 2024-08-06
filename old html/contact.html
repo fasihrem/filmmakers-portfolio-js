@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Who Am I?</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body{
+            /*background-color: #fcefdc;*/
+            /*background: linear-gradient(to bottom, #02e196, #045d3f);*/
+            background: linear-gradient(to top, #41b3a3, #85dcba);
+        }
+
+        p.foot{
+            font-family: Acorn;
+            color: #5d5c5c;
+        }
+
+        .underline {
+            padding: 30px 0 8px;
+            position: relative;
+            font-weight: bolder;
+        }
+
+        .underline::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 12px;
+            width: 140px;
+            height: 8px;
+            transform: skew(-12deg) translateX(-50%);
+            rotate: -0.6deg;
+            /*background: rgba(238,111,87,0.5);*/
+            background: #f1d8b2;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .rLine{
+            padding: 30px 0 8px;
+            position: relative;
+            font-weight: bolder;
+        }
+        .rLine::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 11px;
+            width: 140px;
+            height: 12px;
+            transform: skew(-12deg) translateX(-50%);
+            rotate: -0.6deg;
+            /*background: rgba(238,111,87,0.5);*/
+            /*background: #d52127;*/
+            background: #E1024D;
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        img.timeline{
+            width: 1000px;
+            border-radius: 30px;
+            position: relative;
+            top:-350px;
+            left: 200px;
+        }
+
+        .name{
+            color: #E1024D;
+            padding: 30px 0 8px;
+            position: relative;
+            font-weight: bolder;
+        }
+        .name::after{
+            content: "";
+            position: absolute;
+            left: 48%;
+            bottom: 11px;
+            width: 60px;
+            height: 22px;
+            transform: skew(-12deg) translateX(-50%);
+            rotate: -2deg;
+            /*background: rgba(238,111,87,0.5);*/
+            background: #19FDB0;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        .facebook{
+            padding: 30px 0 8px;
+            position: relative;
+            font-weight: bolder;
+        }
+        .facebook::after{
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 8px;
+            width: 140px;
+            height: 22px;
+            transform: skew(-12deg) translateX(-50%);
+            rotate: -1deg;
+            /*background: rgba(238,111,87,0.5);*/
+            background: #1877F2;
+            opacity: 0.7;
+            z-index: -1;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class = "projects">
+        <ul class="projects">
+            <li><a href="home.html" >HOME</a></li>
+            <li><a href="projects.html">MY WORK</a></li>
+            <li><a href="contact.html" class="currentPage">WHO AM I?</a></li>
+        </ul>
+    </nav>
+
+    <div class="fasih">
+        <img src="img/fasih.jpeg" class="about" alt="Fasih" loading="eager">
+    </div>
+
+    <div class = "fasih2">
+        <img src="img/fasih5.JPG" class="about2" alt="Fasih" loading="eager">
+    </div>
+
+
+
+    <div class="description">
+        <h2>I'm <span class="name">Fasih</span>. A Filmmaker based in <br><span class="underline">Harmonious</span> Islamabad, Pakistan.</h2>
+        <br>
+        <p>I've been working as a Filmmaker since 2018, and<br> I've honed my craft using Adobe Premiere Pro.<br></p>
+        <p>My filmmaking skills extends to the mastery of <br>visual storytelling, and creating compelling <br>
+        naratives through the screen.</p>
+        <p>Film, for me, is a passion project. I only pick up <br>projects I am truly interested in, and provide <br><span class ="rLine">top-notch results!</span></p>
+    </div>
+
+    <div class ="description2">
+        <p>Over the past 6 years, I've accomplished a fair few things as a filmmaker.<br></p>
+        <p>Taking lead of the Fast Production Society Videography team is an acomplishment I am quite proud of!
+            Accompanying the team to recreate a short film<br> based on <span class="facebook">The Social Network</span> is one of proudest works
+            of the collective team. I've also had the opportunity to be the Lead Videography for Nascon '22 <br> and
+            BEC Olympiad '20 where I've made a few of the countdown videos.</p>
+    </div>
+
+    <img src="img/dubai.jpeg" alt ="cool premiere pro timeline" class="timeline">
+
+    <footer>
+        <p class = "foot">Fasih Ur Rehman - 2024</p>
+        <div id="buttons-container">
+            <div class="social-button" onclick="window.open('https://www.linkedin.com/in/fasihrem/', '_blank')">
+                <img src="img/linkedin.png" alt="LinkedIn">
+            </div>
+            <div class="social-button" onclick="window.open('https://www.instagram.com/fasihrem/', '_blank')">
+                <img src="img/instagram.png" alt="Instagram">
+            </div>
+            <div class="social-button" onclick="window.open('https://www.fiverr.com/fasihmakesvideo', '_blank')">
+                <img src="img/fiverr.png" alt="Fiverr">
+            </div>
+            <div class="social-button" onclick="window.open('mailto:fasihrem@email.com', '_blank')">
+                <img src="img/mail.png" alt="Email">
+            </div>
+            <div class="social-button" onclick="window.open('https://read.cv/fasihrem','_blank')">
+                <img src="img/resume.png" alt="resume" class="socialImg">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

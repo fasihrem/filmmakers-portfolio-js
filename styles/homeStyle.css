@@ -1,0 +1,197 @@
+::selection {
+    background-color: black;
+    color: white; /* Optionally set the text color for better visibility on dark background */
+}
+
+/*for firefox*/
+::-moz-selection{
+    background-color: black;
+    color: white;
+}
+
+html{
+    font-family: Ed;
+}
+
+body{
+    background-color: #000000;
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    font-size: xxx-large;
+    color: white;
+    z-index: 1;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.open-icon{
+    z-index: 2;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: #f0f0f0;*/
+    background-color: black;
+    z-index: 3;
+}
+
+.navigation-panel {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Move off-screen initially */
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow-y: auto;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.close-icon {
+    position: absolute;
+    top: 5%;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.open-icon {
+    position: fixed;
+    top: 5%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.open-icon:active{
+    transform: rotate(270deg);
+}
+
+.close-icon:active{
+    transform: rotate(-180deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInListItem {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#openIcon:checked ~ .overlay {
+    display: block;
+}
+
+#openIcon:checked ~ .overlay .navigation-panel li {
+    animation-delay: 0.2s;
+}
+
+#openIcon:checked ~ .overlay .navigation-panel li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+#openIcon:checked ~ .overlay .navigation-panel li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    z-index: 1; /* Ensure the text is above the video */
+    animation: fadeIns 0.5s ease-in-out 2s forwards; /* Add a 4-second delay */
+    opacity: 0; /* Initially set opacity to 0 */
+}
+
+#name-overlay{
+    position: absolute;
+    top: 4%;
+    left: 6%;
+    transform: translate(-50%, -50%);
+    color: #333333;
+    font-size: 2.5em;
+    text-align: left;
+    z-index: 1; /* Ensure the text is above the video */
+}
+
+@keyframes fadeIns {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+ul.projects{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li a {
+    text-decoration: none;
+    /*color: #252525;*/
+    color: white;
+    font-size: 3.5em;
+    display: block;
+    padding: 10px;
+    transition: text-decoration 0.2s;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+}
+
+li a:hover {
+    text-decoration: line-through;
+}
+
+.currentPage{
+    text-decoration: line-through;
+}
